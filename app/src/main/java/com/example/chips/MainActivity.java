@@ -18,21 +18,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ChipGroup cg = findViewById(R.id.maps_chip_group);
+//        ChipGroup cg = findViewById(R.id.maps_chip_group);
+//
+//        cg.setOnCheckedStateChangeListener(new ChipGroup.OnCheckedStateChangeListener() {
+//            @Override
+//            public void onCheckedChanged(@NonNull ChipGroup group, @NonNull List<Integer> checkedIds) {
+//
+//                int selectedChip = checkedIds.get(0);
+//
+//                Chip chip = cg.findViewById(selectedChip);
+//
+//                if (chip != null)
+//                    Toast.makeText(MainActivity.this, "Chip: " + chip.getText(), Toast.LENGTH_SHORT).show();
+//
+//            }
+//        });
 
-        cg.setOnCheckedStateChangeListener(new ChipGroup.OnCheckedStateChangeListener() {
-            @Override
-            public void onCheckedChanged(@NonNull ChipGroup group, @NonNull List<Integer> checkedIds) {
 
-                int selectedChip = checkedIds.get(0);
 
-                Chip chip = cg.findViewById(selectedChip);
-
-                if (chip != null)
-                    Toast.makeText(MainActivity.this, "Chip: " + chip.getText(), Toast.LENGTH_SHORT).show();
-
-            }
-        });
 
     }
 }

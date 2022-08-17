@@ -4,92 +4,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
 
-    <HorizontalScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:padding="8dp"
-        android:scrollbars="none">
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="10dp"
+        android:padding="10dp">
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="143dp"
+            android:src="@drawable/tj2"/>
 
-
-        <com.google.android.material.chip.ChipGroup
-            android:id="@+id/maps_chip_group"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:chipSpacingHorizontal="5dp"
-            app:singleSelection="true"
-            app:singleLine="true">
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Journal"
+                android:layout_gravity="right"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20 Jan 2022"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black"/>
 
             <com.google.android.material.chip.Chip
+                android:id="@+id/chip_place_marker"
                 style="@style/Widget.MaterialComponents.Chip.Choice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Church"
+                android:text="Place Marker"
                 app:chipIconVisible="true"
-                app:chipIcon="@drawable/ic_baseline_home_work_24"/>
-
-            <com.google.android.material.chip.Chip
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Petrol"
-                app:chipIconVisible="true"
-                app:chipIcon="@drawable/ic_baseline_local_gas_station_24"/>
+                android:textColor="@color/black"
+                app:chipIcon="@drawable/ic_baseline_place_24"
+                app:chipBackgroundColor="#DBF0FF"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="right"/>
 
 
-            <com.google.android.material.chip.Chip
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Groceries"
-                app:chipIconVisible="true"
-                app:chipIcon="@drawable/ic_baseline_shopping_cart_24"/>
+        </LinearLayout>
 
+    </LinearLayout>
 
-            <com.google.android.material.chip.Chip
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Shopping"
-                app:chipIconVisible="true"
-                app:chipIcon="@drawable/ic_baseline_shopping_bag_24"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Gateway Theatre Of Shopping"
+        android:textColorHint="@color/black"
+        app:boxStrokeColor="@color/black"
+        app:hintTextColor="@color/black"
+        android:padding="5dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textMultiLine"
+            android:lines="15"
+            android:gravity="top"
+            android:textColor="@color/black"
+            android:overScrollMode="always"
+            android:scrollbars="vertical"
+            android:scrollbarStyle="insideInset"
+            android:scrollHorizontally="false"
 
-            <com.google.android.material.chip.Chip
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hotel"
-                app:chipIconVisible="true"
-                app:chipIcon="@drawable/ic_baseline_local_hotel_24"/>
-
-            <com.google.android.material.chip.Chip
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Fast Food"
-                app:chipIconVisible="true"
-                app:chipIcon="@drawable/ic_baseline_fastfood_24"/>
-
-            <com.google.android.material.chip.Chip
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Train"
-                app:chipIconVisible="true"
-                app:chipIcon="@drawable/ic_baseline_train_24"/>
-
-            <com.google.android.material.chip.Chip
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Airport"
-                app:chipIconVisible="true"
-                app:chipIcon="@drawable/ic_baseline_local_airport_24"/>
-
-        </com.google.android.material.chip.ChipGroup>
-
-    </HorizontalScrollView>
+            />
+    </com.google.android.material.textfield.TextInputLayout>
 
 </LinearLayout>
